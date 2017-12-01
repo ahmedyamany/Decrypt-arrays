@@ -1,0 +1,604 @@
+<html>
+	<head>
+		<title>القيمه النهائيه</title>
+		<meta charset="utf-8">
+		<style>
+						body{
+	height:150px;
+	width:1000px;
+	background-color:#DDD
+}
+.border{
+	  border: 3px solid black;
+    padding: 30 30;
+    padding-bottom:60px; 
+		padding-left:250px;
+		background-color:#fff
+}
+.input{
+	max-width:10%;
+	margin-top:10px;
+	background-color:#404552;
+		border: 1.5px solid  #000000
+	
+}
+lable{
+	margin-left:15px;
+     font-family: Studio Gothic  ;
+     color:black
+     }
+button{
+		margin-top:10px;
+		margin-left:350px;
+	background-color:#404552;
+		border: 1.5px solid  #000000
+
+     }
+ span{
+		margin-right:50px;
+		margin-left:10px
+     }
+.reset{
+margin-left:350px;
+margin-top:5px}
+
+		</style>
+	</head>
+	<body>
+		<div class="border">
+			<input class="input" id="input1">
+			<input class="input" id="input2">
+			<input class="input" id="input3">
+			<input class="input" id="input4"><lable><b>Code</b></lable><br>
+			<button id="button"> encrypt</button><br> <br>
+			<span id="span1"></span>
+			<span id="span2"></span>
+			<span id="span3"></span>
+			<span id="span4"></span>
+			<div id="div"></div>
+		</div>
+	</body>
+	<script>
+		         /***************************************
+		 *  	تعريف حقول الادخال كمتغيرات		*
+		 * 										*
+		 ************************************** */
+
+var input1 = document.getElementById("input1"),
+	input2 = document.getElementById("input2"),
+	input3 = document.getElementById("input3"),
+	input4 = document.getElementById("input4");
+		 
+		 /*******************************
+		  * 	تعريف الزرار كمتغير 	*
+		  * 							*
+		  * *****************************/ 
+
+var 	
+	button = document.getElementById("button");
+	
+	
+	/****************************
+	 * 	 *             تعريف ال span كمتغيرات 
+	 * 							*
+	 * **************************/
+
+var span1 = document.getElementById("span1"),
+	span2 = document.getElementById("span2"),
+	span3 = document.getElementById("span3"),
+	span4 = document.getElementById("span4"),
+	div = document.getElementById("div");
+
+button.onclick = function(){
+	if(input1.value==1){span1.innerHTML = "a"}
+	else if (input1.value==2){span1.innerHTML = "b"}
+	else if (input1.value==3){span1.innerHTML = "c"}
+	else if (input1.value==4){span1.innerHTML = "d"}
+	else if (input1.value==5){span1.innerHTML = "e"}
+	else if (input1.value==6){span1.innerHTML = "f"}
+	else if (input1.value==7){span1.innerHTML = "g"}
+	else if (input1.value==8){span1.innerHTML = "h"}
+	else if (input1.value==9){span1.innerHTML = "j"}
+	else if (input1.value==10){span1.innerHTML = "k"}
+	else if (input1.value==11){span1.innerHTML = "l"}
+	else if (input1.value==12){span1.innerHTML = "m"}
+	else if (input1.value==13){span1.innerHTML = "n"}
+	else if (input1.value==14){span1.innerHTML = "o"}
+	else if (input1.value==15){span1.innerHTML = "b"}
+	else if (input1.value==16){span1.innerHTML = "q"}
+	else if (input1.value==17){span1.innerHTML = "r"}
+	else if (input1.value==18){span1.innerHTML = "s"}
+	else if (input1.value==19){span1.innerHTML = "t"}
+	else if (input1.value==20){span1.innerHTML = "u"}
+	else if (input1.value==21){span1.innerHTML = "v"}
+	else if (input1.value==22){span1.innerHTML = "w"}
+	else if (input1.value==23){span1.innerHTML = "x"}
+	else if (input1.value==24){span1.innerHTML = "y"}
+	else if (input1.value==25){span1.innerHTML = "z"}
+	else if (input1.value==26){span1.innerHTML = "i"}
+	else if (input1.value==27){span1.innerHTML = "0"}
+	else if (input1.value==28){span1.innerHTML = "1"}
+	else if (input1.value==29){span1.innerHTML = "2"}
+	else if (input1.value==30){span1.innerHTML = "3"}
+	else if (input1.value==31){span1.innerHTML = "4"}
+	else if (input1.value==32){span1.innerHTML = "5"}
+	else if (input1.value==33){span1.innerHTML = "6"}
+	else if (input1.value==34){span1.innerHTML = "7"}
+	else if (input1.value==35){span1.innerHTML = "8"}
+	else if (input1.value==36){span1.innerHTML = "9"}
+	else if (input1.value==37){span1.innerHTML = "أ"}
+	else if (input1.value==38){span1.innerHTML = "ب"}
+	else if (input1.value==39){span1.innerHTML = "ت"}
+	else if (input1.value==40){span1.innerHTML = "ث"}
+	else if (input1.value==41){span1.innerHTML = "ج"}
+	else if (input1.value==42){span1.innerHTML = "ح"}
+	else if (input1.value==43){span1.innerHTML = "خ"}
+	else if (input1.value==44){span1.innerHTML = "د"}
+	else if (input1.value==45){span1.innerHTML = "ذ"}
+	else if (input1.value==46){span1.innerHTML = "ر"}
+	else if (input1.value==47){span1.innerHTML = "ز"}
+	else if (input1.value==48){span1.innerHTML = "س"}
+	else if (input1.value==49){span1.innerHTML = "ش"}
+	else if (input1.value==50){span1.innerHTML = "ص"}
+	else if (input1.value==51){span1.innerHTML = "ض"}
+	else if (input1.value==52){span1.innerHTML = "ط"}
+	else if (input1.value==53){span1.innerHTML = "ظ"}
+	else if (input1.value==54){span1.innerHTML = "ع"}
+	else if (input1.value==55){span1.innerHTML = "غ"}
+	else if (input1.value==56){span1.innerHTML = "ف"}
+	else if (input1.value==57){span1.innerHTML = "ق"}
+	else if (input1.value==58){span1.innerHTML = "ك"}
+	else if (input1.value==59){span1.innerHTML = "ل"}
+	else if (input1.value==60){span1.innerHTML = "م"}
+	else if (input1.value==61){span1.innerHTML = "ن"}
+	else if (input1.value==62){span1.innerHTML = "هـ"}
+	else if (input1.value==63){span1.innerHTML = "و"}
+	else if (input1.value==64){span1.innerHTML = "ي"}
+	else if (input1.value==65){span1.innerHTML = "."}
+	else if (input1.value==66){span1.innerHTML = ","}
+	else if (input1.value==67){span1.innerHTML = "!"}
+	else if (input1.value==68){span1.innerHTML = "@"}
+	else if (input1.value==69){span1.innerHTML = "#"}
+	else if (input1.value==70){span1.innerHTML = "$"}
+	else if (input1.value==71){span1.innerHTML = "%"}
+	else if (input1.value==72){span1.innerHTML = "^"}
+	else if (input1.value==73){span1.innerHTML = "&"}
+	else if (input1.value==74){span1.innerHTML = "*"}
+	else if (input1.value==75){span1.innerHTML = "("}
+	else if (input1.value==76){span1.innerHTML = ")"}
+	else if (input1.value==77){span1.innerHTML = "_"}
+	else if (input1.value==78){span1.innerHTML = "-"}
+	else if (input1.value==79){span1.innerHTML = "+"}
+	else if (input1.value==80){span1.innerHTML = "|"}
+	else if (input1.value==81){span1.innerHTML = " = "}
+	else if (input1.value==82){span1.innerHTML = " \ "}
+	else if (input1.value==83){span1.innerHTML = "/"}
+	else if (input1.value==84){span1.innerHTML = "؟"}
+	else if (input1.value==85){span1.innerHTML = "?"}
+	else if (input1.value==86){span1.innerHTML = ":"}
+	else if (input1.value==87){span1.innerHTML = ";"}
+	else if (input1.value==88){span1.innerHTML = "\"\ "}
+	else if (input1.value==89){span1.innerHTML = "'"}
+	else if (input1.value==90){span1.innerHTML = ">"}
+	else if (input1.value==91){span1.innerHTML = "<"}
+	else if (input1.value==92){span1.innerHTML = "["}
+	else if (input1.value==93){span1.innerHTML = "]"}
+	else if (input1.value==94){span1.innerHTML = "{"}
+	else if (input1.value==95){span1.innerHTML = "}"}
+	else if (input1.value==96){span1.innerHTML = "A"}
+	else if (input1.value==97){span1.innerHTML = "B"}
+	else if (input1.value==98){span1.innerHTML = "C"}
+	else if (input1.value==99){span1.innerHTML = "D"}
+	else if (input1.value==100){span1.innerHTML = "E"}
+	else if (input1.value==101){span1.innerHTML = "F"}
+	else if (input1.value==102){span1.innerHTML = "G"}
+	else if (input1.value==103){span1.innerHTML = "H"}
+	else if (input1.value==104){span1.innerHTML = "I"}
+	else if (input1.value==105){span1.innerHTML = "J"}
+	else if (input1.value==106){span1.innerHTML = "K"}
+	else if (input1.value==107){span1.innerHTML = "L"}
+	else if (input1.value==108){span1.innerHTML = "M"}
+	else if (input1.value==109){span1.innerHTML = "N"}
+	else if (input1.value==110){span1.innerHTML = "O"}
+	else if (input1.value==111){span1.innerHTML = "P"}
+	else if (input1.value==112){span1.innerHTML = "Q"}
+	else if (input1.value==113){span1.innerHTML = "R"}
+	else if (input1.value==114){span1.innerHTML = "S"}
+	else if (input1.value==115){span1.innerHTML = "T"}
+	else if (input1.value==116){span1.innerHTML = "U"}
+	else if (input1.value==117){span1.innerHTML = "V"}
+	else if (input1.value==118){span1.innerHTML = "W"}
+	else if (input1.value==119){span1.innerHTML = "X"}
+	else if (input1.value==120){span1.innerHTML = "Y"}
+	else if (input1.value==121){span1.innerHTML = "Z"}
+	else if (input1.value==122){span1.innerHTML = "×"}
+	else if (input1.value==123){span1.innerHTML = "÷"}
+            /* input2 */
+            
+      if(input2.value==1){span2.innerHTML = "a"}
+	else if (input2.value==2){span2.innerHTML = "b"}
+	else if (input2.value==3){span2.innerHTML = "c"}
+	else if (input2.value==4){span2.innerHTML = "d"}
+	else if (input2.value==5){span2.innerHTML = "e"}
+	else if (input2.value==6){span2.innerHTML = "f"}
+	else if (input2.value==7){span2.innerHTML = "g"}
+	else if (input2.value==8){span2.innerHTML = "h"}
+	else if (input2.value==9){span2.innerHTML = "j"}
+	else if (input2.value==10){span2.innerHTML = "k"}
+	else if (input2.value==11){span2.innerHTML = "l"}
+	else if (input2.value==12){span2.innerHTML = "m"}
+	else if (input2.value==13){span2.innerHTML = "n"}
+	else if (input2.value==14){span2.innerHTML = "o"}
+	else if (input2.value==15){span2.innerHTML = "b"}
+	else if (input2.value==16){span2.innerHTML = "q"}
+	else if (input2.value==17){span2.innerHTML = "r"}
+	else if (input2.value==18){span2.innerHTML = "s"}
+	else if (input2.value==19){span2.innerHTML = "t"}
+	else if (input2.value==20){span2.innerHTML = "u"}
+	else if (input2.value==21){span2.innerHTML = "v"}
+	else if (input2.value==22){span2.innerHTML = "w"}
+	else if (input2.value==23){span2.innerHTML = "x"}
+	else if (input2.value==24){span2.innerHTML = "y"}
+	else if (input2.value==25){span2.innerHTML = "z"}
+	else if (input2.value==26){span2.innerHTML = "i"}
+	else if (input2.value==27){span2.innerHTML = "0"}
+	else if (input2.value==28){span2.innerHTML = "1"}
+	else if (input2.value==29){span2.innerHTML = "2"}
+	else if (input2.value==30){span2.innerHTML = "3"}
+	else if (input2.value==31){span2.innerHTML = "4"}
+	else if (input2.value==32){span2.innerHTML = "5"}
+	else if (input2.value==33){span2.innerHTML = "6"}
+	else if (input2.value==34){span2.innerHTML = "7"}
+	else if (input2.value==35){span2.innerHTML = "8"}
+	else if (input2.value==36){span2.innerHTML = "9"}
+	else if (input2.value==37){span2.innerHTML = "أ"}
+	else if (input2.value==38){span2.innerHTML = "ب"}
+	else if (input2.value==39){span2.innerHTML = "ت"}
+	else if (input2.value==40){span2.innerHTML = "ث"}
+	else if (input2.value==41){span2.innerHTML = "ج"}
+	else if (input2.value==42){span2.innerHTML = "ح"}
+	else if (input2.value==43){span2.innerHTML = "خ"}
+	else if (input2.value==44){span2.innerHTML = "د"}
+	else if (input2.value==45){span2.innerHTML = "ذ"}
+	else if (input2.value==46){span2.innerHTML = "ر"}
+	else if (input2.value==47){span2.innerHTML = "ز"}
+	else if (input2.value==48){span2.innerHTML = "س"}
+	else if (input2.value==49){span2.innerHTML = "ش"}
+	else if (input2.value==50){span2.innerHTML = "ص"}
+	else if (input2.value==51){span2.innerHTML = "ض"}
+	else if (input2.value==52){span2.innerHTML = "ط"}
+	else if (input2.value==53){span2.innerHTML = "ظ"}
+	else if (input2.value==54){span2.innerHTML = "ع"}
+	else if (input2.value==55){span2.innerHTML = "غ"}
+	else if (input2.value==56){span2.innerHTML = "ف"}
+	else if (input2.value==57){span2.innerHTML = "ق"}
+	else if (input2.value==58){span2.innerHTML = "ك"}
+	else if (input2.value==59){span2.innerHTML = "ل"}
+	else if (input2.value==60){span2.innerHTML = "م"}
+	else if (input2.value==61){span2.innerHTML = "ن"}
+	else if (input2.value==62){span2.innerHTML = "هـ"}
+	else if (input2.value==63){span2.innerHTML = "و"}
+	else if (input2.value==64){span2.innerHTML = "ي"}
+	else if (input2.value==65){span2.innerHTML = "."}
+	else if (input2.value==66){span2.innerHTML = ","}
+	else if (input2.value==67){span2.innerHTML = "!"}
+	else if (input2.value==68){span2.innerHTML = "@"}
+	else if (input2.value==69){span2.innerHTML = "#"}
+	else if (input2.value==70){span2.innerHTML = "$"}
+	else if (input2.value==71){span2.innerHTML = "%"}
+	else if (input2.value==72){span2.innerHTML = "^"}
+	else if (input2.value==73){span2.innerHTML = "&"}
+	else if (input2.value==74){span2.innerHTML = "*"}
+	else if (input2.value==75){span2.innerHTML = "("}
+	else if (input2.value==76){span2.innerHTML = ")"}
+	else if (input2.value==77){span2.innerHTML = "_"}
+	else if (input2.value==78){span2.innerHTML = "-"}
+	else if (input2.value==79){span2.innerHTML = "+"}
+	else if (input2.value==80){span2.innerHTML = "|"}
+	else if (input2.value==81){span2.innerHTML = " = "}
+	else if (input2.value==82){span2.innerHTML = "\ "}
+	else if (input2.value==83){span2.innerHTML = "/"}
+	else if (input2.value==84){span2.innerHTML = "؟"}
+	else if (input2.value==85){span2.innerHTML = "?"}
+	else if (input2.value==86){span2.innerHTML = ":"}
+	else if (input2.value==87){span2.innerHTML = ";"}
+	else if (input2.value==88){span2.innerHTML = "\"\ "}
+	else if (input2.value==89){span2.innerHTML = "'"}
+	else if (input2.value==90){span2.innerHTML = ">"}
+	else if (input2.value==91){span2.innerHTML = "<"}
+	else if (input2.value==92){span2.innerHTML = "["}
+	else if (input2.value==93){span2.innerHTML = "]"}
+	else if (input2.value==94){span2.innerHTML = "{"}
+	else if (input2.value==95){span2.innerHTML = "}"}
+	else if (input2.value==96){span2.innerHTML = "A"}
+	else if (input2.value==97){span2.innerHTML = "B"}
+	else if (input2.value==98){span2.innerHTML = "C"}
+	else if (input2.value==99){span2.innerHTML = "D"}
+	else if (input2.value==100){span2.innerHTML = "E"}
+	else if (input2.value==101){span2.innerHTML = "F"}
+	else if (input2.value==102){span2.innerHTML = "G"}
+	else if (input2.value==103){span2.innerHTML = "H"}
+	else if (input2.value==104){span2.innerHTML = "I"}
+	else if (input2.value==105){span2.innerHTML = "J"}
+	else if (input2.value==106){span2.innerHTML = "K"}
+	else if (input2.value==107){span2.innerHTML = "L"}
+	else if (input2.value==108){span2.innerHTML = "M"}
+	else if (input2.value==109){span2.innerHTML = "N"}
+	else if (input2.value==110){span2.innerHTML = "O"}
+	else if (input2.value==111){span2.innerHTML = "P"}
+	else if (input2.value==112){span2.innerHTML = "Q"}
+	else if (input2.value==113){span2.innerHTML = "R"}
+	else if (input2.value==114){span2.innerHTML = "S"}
+	else if (input2.value==115){span2.innerHTML = "T"}
+	else if (input2.value==116){span2.innerHTML = "U"}
+	else if (input2.value==117){span2.innerHTML = "V"}
+	else if (input2.value==118){span2.innerHTML = "W"}
+	else if (input2.value==119){span2.innerHTML = "X"}
+	else if (input2.value==120){span2.innerHTML = "Y"}
+	else if (input2.value==121){span2.innerHTML = "Z"}
+	else if (input2.value==122){span2.innerHTML = "×"}
+	else if (input2.value==123){span2.innerHTML = "÷"}
+	        /* input3*/
+	        
+	        
+	        
+	 if(input3.value==1){span3.innerHTML = "a"}
+	else if (input3.value==2){span3.innerHTML = "b"}
+	else if (input3.value==3){span3.innerHTML = "c"}
+	else if (input3.value==4){span3.innerHTML = "d"}
+	else if (input3.value==5){span3.innerHTML = "e"}
+	else if (input3.value==6){span3.innerHTML = "f"}
+	else if (input3.value==7){span3.innerHTML = "g"}
+	else if (input3.value==8){span3.innerHTML = "h"}
+	else if (input3.value==9){span3.innerHTML = "j"}
+	else if (input3.value==10){span3.innerHTML = "k"}
+	else if (input3.value==11){span3.innerHTML = "l"}
+	else if (input3.value==12){span3.innerHTML = "m"}
+	else if (input3.value==13){span3.innerHTML = "n"}
+	else if (input3.value==14){span3.innerHTML = "o"}
+	else if (input3.value==15){span3.innerHTML = "b"}
+	else if (input3.value==16){span3.innerHTML = "q"}
+	else if (input3.value==17){span3.innerHTML = "r"}
+	else if (input3.value==18){span3.innerHTML = "s"}
+	else if (input3.value==19){span3.innerHTML = "t"}
+	else if (input3.value==20){span3.innerHTML = "u"}
+	else if (input3.value==21){span3.innerHTML = "v"}
+	else if (input3.value==22){span3.innerHTML = "w"}
+	else if (input3.value==23){span3.innerHTML = "x"}
+	else if (input3.value==24){span3.innerHTML = "y"}
+	else if (input3.value==25){span3.innerHTML = "z"}
+	else if (input3.value==26){span3.innerHTML = "i"}
+	else if (input3.value==27){span3.innerHTML = "0"}
+	else if (input3.value==28){span3.innerHTML = "1"}
+	else if (input3.value==29){span3.innerHTML = "2"}
+	else if (input3.value==30){span3.innerHTML = "3"}
+	else if (input3.value==31){span3.innerHTML = "4"}
+	else if (input3.value==32){span3.innerHTML = "5"}
+	else if (input3.value==33){span3.innerHTML = "6"}
+	else if (input3.value==34){span3.innerHTML = "7"}
+	else if (input3.value==35){span3.innerHTML = "8"}
+	else if (input3.value==36){span3.innerHTML = "9"}
+	else if (input3.value==37){span3.innerHTML = "أ"}
+	else if (input3.value==38){span3.innerHTML = "ب"}
+	else if (input3.value==39){span3.innerHTML = "ت"}
+	else if (input3.value==40){span3.innerHTML = "ث"}
+	else if (input3.value==41){span3.innerHTML = "ج"}
+	else if (input3.value==42){span3.innerHTML = "ح"}
+	else if (input3.value==43){span3.innerHTML = "خ"}
+	else if (input3.value==44){span3.innerHTML = "د"}
+	else if (input3.value==45){span3.innerHTML = "ذ"}
+	else if (input3.value==46){span3.innerHTML = "ر"}
+	else if (input3.value==47){span3.innerHTML = "ز"}
+	else if (input3.value==48){span3.innerHTML = "س"}
+	else if (input3.value==49){span3.innerHTML = "ش"}
+	else if (input3.value==50){span3.innerHTML = "ص"}
+	else if (input3.value==51){span3.innerHTML = "ض"}
+	else if (input3.value==52){span3.innerHTML = "ط"}
+	else if (input3.value==53){span3.innerHTML = "ظ"}
+	else if (input3.value==54){span3.innerHTML = "ع"}
+	else if (input3.value==55){span3.innerHTML = "غ"}
+	else if (input3.value==56){span3.innerHTML = "ف"}
+	else if (input3.value==57){span3.innerHTML = "ق"}
+	else if (input3.value==58){span3.innerHTML = "ك"}
+	else if (input3.value==59){span3.innerHTML = "ل"}
+	else if (input3.value==60){span3.innerHTML = "م"}
+	else if (input3.value==61){span3.innerHTML = "ن"}
+	else if (input3.value==62){span3.innerHTML = "هـ"}
+	else if (input3.value==63){span3.innerHTML = "و"}
+	else if (input3.value==64){span3.innerHTML = "ي"}
+	else if (input3.value==65){span3.innerHTML = "."}
+	else if (input3.value==66){span3.innerHTML = ","}
+	else if (input3.value==67){span3.innerHTML = "!"}
+	else if (input3.value==68){span3.innerHTML = "@"}
+	else if (input3.value==69){span3.innerHTML = "#"}
+	else if (input3.value==70){span3.innerHTML = "$"}
+	else if (input3.value==71){span3.innerHTML = "%"}
+	else if (input3.value==72){span3.innerHTML = "^"}
+	else if (input3.value==73){span3.innerHTML = "&"}
+	else if (input3.value==74){span3.innerHTML = "*"}
+	else if (input3.value==75){span3.innerHTML = "("}
+	else if (input3.value==76){span3.innerHTML = ")"}
+	else if (input3.value==77){span3.innerHTML = "_"}
+	else if (input3.value==78){span3.innerHTML = "-"}
+	else if (input3.value==79){span3.innerHTML = "+"}
+	else if (input3.value==80){span3.innerHTML = "|"}
+	else if (input3.value==81){span3.innerHTML = " = "}
+	else if (input3.value==82){span3.innerHTML = "\ "}
+	else if (input3.value==83){span3.innerHTML = "/"}
+	else if (input3.value==84){span3.innerHTML = "؟"}
+	else if (input3.value==85){span3.innerHTML = "?"}
+	else if (input3.value==86){span3.innerHTML = ":"}
+	else if (input3.value==87){span3.innerHTML = ";"}
+	else if (input3.value==88){span3.innerHTML = "\"\ "}
+	else if (input3.value==89){span3.innerHTML = "'"}
+	else if (input3.value==90){span3.innerHTML = ">"}
+	else if (input3.value==91){span3.innerHTML = "<"}
+	else if (input3.value==92){span3.innerHTML = "["}
+	else if (input3.value==93){span3.innerHTML = "]"}
+	else if (input3.value==94){span3.innerHTML = "{"}
+	else if (input3.value==95){span3.innerHTML = "}"}
+	else if (input3.value==96){span3.innerHTML = "A"}
+	else if (input3.value==97){span3.innerHTML = "B"}
+	else if (input3.value==98){span3.innerHTML = "C"}
+	else if (input3.value==99){span3.innerHTML = "D"}
+	else if (input3.value==100){span3.innerHTML = "E"}
+	else if (input3.value==101){span3.innerHTML = "F"}
+	else if (input3.value==102){span3.innerHTML = "G"}
+	else if (input3.value==103){span3.innerHTML = "H"}
+	else if (input3.value==104){span3.innerHTML = "I"}
+	else if (input3.value==105){span3.innerHTML = "J"}
+	else if (input3.value==106){span3.innerHTML = "K"}
+	else if (input3.value==107){span3.innerHTML = "L"}
+	else if (input3.value==108){span3.innerHTML = "M"}
+	else if (input3.value==109){span3.innerHTML = "N"}
+	else if (input3.value==110){span3.innerHTML = "O"}
+	else if (input3.value==111){span3.innerHTML = "P"}
+	else if (input3.value==112){span3.innerHTML = "Q"}
+	else if (input3.value==113){span3.innerHTML = "R"}
+	else if (input3.value==114){span3.innerHTML = "S"}
+	else if (input3.value==115){span3.innerHTML = "T"}
+	else if (input3.value==116){span3.innerHTML = "U"}
+	else if (input3.value==117){span3.innerHTML = "V"}
+	else if (input3.value==118){span3.innerHTML = "W"}
+	else if (input3.value==119){span3.innerHTML = "X"}
+	else if (input3.value==120){span3.innerHTML = "Y"}
+	else if (input3.value==121){span3.innerHTML = "Z"}
+	else if (input3.value==122){span3.innerHTML = "×"}
+	else if (input3.value==123){span3.innerHTML = "÷"}
+
+             /* input4*/
+             
+             
+             
+     if(input4.value==1){span4.innerHTML = "a"}
+	else if (input4.value==2){span4.innerHTML = "b"}
+	else if (input4.value==3){span4.innerHTML = "c"}
+	else if (input4.value==4){span4.innerHTML = "d"}
+	else if (input4.value==5){span4.innerHTML = "e"}
+	else if (input4.value==6){span4.innerHTML = "f"}
+	else if (input4.value==7){span4.innerHTML = "g"}
+	else if (input4.value==8){span4.innerHTML = "h"}
+	else if (input4.value==9){span4.innerHTML = "j"}
+	else if (input4.value==10){span4.innerHTML = "k"}
+	else if (input4.value==11){span4.innerHTML = "l"}
+	else if (input4.value==12){span4.innerHTML = "m"}
+	else if (input4.value==13){span4.innerHTML = "n"}
+	else if (input4.value==14){span4.innerHTML = "o"}
+	else if (input4.value==15){span4.innerHTML = "b"}
+	else if (input4.value==16){span4.innerHTML = "q"}
+	else if (input4.value==17){span4.innerHTML = "r"}
+	else if (input4.value==18){span4.innerHTML = "s"}
+	else if (input4.value==19){span4.innerHTML = "t"}
+	else if (input4.value==20){span4.innerHTML = "u"}
+	else if (input4.value==21){span4.innerHTML = "v"}
+	else if (input4.value==22){span4.innerHTML = "w"}
+	else if (input4.value==23){span4.innerHTML = "x"}
+	else if (input4.value==24){span4.innerHTML = "y"}
+	else if (input4.value==25){span4.innerHTML = "z"}
+	else if (input4.value==26){span4.innerHTML = "i"}
+	else if (input4.value==27){span4.innerHTML = "0"}
+	else if (input4.value==28){span4.innerHTML = "1"}
+	else if (input4.value==29){span4.innerHTML = "2"}
+	else if (input4.value==30){span4.innerHTML = "3"}
+	else if (input4.value==31){span4.innerHTML = "4"}
+	else if (input4.value==32){span4.innerHTML = "5"}
+	else if (input4.value==33){span4.innerHTML = "6"}
+	else if (input4.value==34){span4.innerHTML = "7"}
+	else if (input4.value==35){span4.innerHTML = "8"}
+	else if (input4.value==36){span4.innerHTML = "9"}
+	else if (input4.value==37){span4.innerHTML = "أ"}
+	else if (input4.value==38){span4.innerHTML = "ب"}
+	else if (input4.value==39){span4.innerHTML = "ت"}
+	else if (input4.value==40){span4.innerHTML = "ث"}
+	else if (input4.value==41){span4.innerHTML = "ج"}
+	else if (input4.value==42){span4.innerHTML = "ح"}
+	else if (input4.value==43){span4.innerHTML = "خ"}
+	else if (input4.value==44){span4.innerHTML = "د"}
+	else if (input4.value==45){span4.innerHTML = "ذ"}
+	else if (input4.value==46){span4.innerHTML = "ر"}
+	else if (input4.value==47){span4.innerHTML = "ز"}
+	else if (input4.value==48){span4.innerHTML = "س"}
+	else if (input4.value==49){span4.innerHTML = "ش"}
+	else if (input4.value==50){span4.innerHTML = "ص"}
+	else if (input4.value==51){span4.innerHTML = "ض"}
+	else if (input4.value==52){span4.innerHTML = "ط"}
+	else if (input4.value==53){span4.innerHTML = "ظ"}
+	else if (input4.value==54){span4.innerHTML = "ع"}
+	else if (input4.value==55){span4.innerHTML = "غ"}
+	else if (input4.value==56){span4.innerHTML = "ف"}
+	else if (input4.value==57){span4.innerHTML = "ق"}
+	else if (input4.value==58){span4.innerHTML = "ك"}
+	else if (input4.value==59){span4.innerHTML = "ل"}
+	else if (input4.value==60){span4.innerHTML = "م"}
+	else if (input4.value==61){span4.innerHTML = "ن"}
+	else if (input4.value==62){span4.innerHTML = "هـ"}
+	else if (input4.value==63){span4.innerHTML = "و"}
+	else if (input4.value==64){span4.innerHTML = "ي"}
+	else if (input4.value==65){span4.innerHTML = "."}
+	else if (input4.value==66){span4.innerHTML = ","}
+	else if (input4.value==67){span4.innerHTML = "!"}
+	else if (input4.value==68){span4.innerHTML = "@"}
+	else if (input4.value==69){span4.innerHTML = "#"}
+	else if (input4.value==70){span4.innerHTML = "$"}
+	else if (input4.value==71){span4.innerHTML = "%"}
+	else if (input4.value==72){span4.innerHTML = "^"}
+	else if (input4.value==73){span4.innerHTML = "&"}
+	else if (input4.value==74){span4.innerHTML = "*"}
+	else if (input4.value==75){span4.innerHTML = "("}
+	else if (input4.value==76){span4.innerHTML = ")"}
+	else if (input4.value==77){span4.innerHTML = "_"}
+	else if (input4.value==78){span4.innerHTML = "-"}
+	else if (input4.value==79){span4.innerHTML = "+"}
+	else if (input4.value==80){span4.innerHTML = "|"}
+	else if (input4.value==81){span4.innerHTML = " = "}
+	else if (input4.value==82){span4.innerHTML = "\ "}
+	else if (input4.value==83){span4.innerHTML = "/"}
+	else if (input4.value==84){span4.innerHTML = "؟"}
+	else if (input4.value==85){span4.innerHTML = "?"}
+	else if (input4.value==86){span4.innerHTML = ":"}
+	else if (input4.value==87){span4.innerHTML = ";"}
+	else if (input4.value==88){span4.innerHTML = "\"\ "}
+	else if (input4.value==89){span4.innerHTML = "'"}
+	else if (input4.value==90){span4.innerHTML = ">"}
+	else if (input4.value==91){span4.innerHTML = "<"}
+	else if (input4.value==92){span4.innerHTML = "["}
+	else if (input4.value==93){span4.innerHTML = "]"}
+	else if (input4.value==94){span4.innerHTML = "{"}
+	else if (input4.value==95){span4.innerHTML = "}"}
+	else if (input4.value==96){span4.innerHTML = "A"}
+	else if (input4.value==97){span4.innerHTML = "B"}
+	else if (input4.value==98){span4.innerHTML = "C"}
+	else if (input3.value==99){span4.innerHTML = "D"}
+	else if (input4.value==100){span4.innerHTML = "E"}
+	else if (input4.value==101){span4.innerHTML = "F"}
+	else if (input4.value==102){span4.innerHTML = "G"}
+	else if (input4.value==103){span4.innerHTML = "H"}
+	else if (input4.value==104){span4.innerHTML = "I"}
+	else if (input4.value==105){span4.innerHTML = "J"}
+	else if (input4.value==106){span4.innerHTML = "K"}
+	else if (input4.value==107){span4.innerHTML = "L"}
+	else if (input4.value==108){span4.innerHTML = "M"}
+	else if (input4.value==109){span4.innerHTML = "N"}
+	else if (input4.value==110){span4.innerHTML = "O"}
+	else if (input4.value==111){span4.innerHTML = "P"}
+	else if (input4.value==112){span4.innerHTML = "Q"}
+	else if (input4.value==113){span4.innerHTML = "R"}
+	else if (input4.value==114){span4.innerHTML = "S"}
+	else if (input4.value==115){span4.innerHTML = "T"}
+	else if (input4.value==116){span4.innerHTML = "U"}
+	else if (input4.value==117){span4.innerHTML = "V"}
+	else if (input4.value==118){span4.innerHTML = "W"}
+	else if (input4.value==119){span4.innerHTML = "X"}
+	else if (input4.value==120){span4.innerHTML = "Y"}
+	else if (input4.value==121){span4.innerHTML = "Z"}
+	else if (input4.value==122){span4.innerHTML = "×"}
+	else if (input4.value==123){span4.innerHTML = "÷"}
+
+
+
+
+		
+	
+}
+	</script>
+</html>
